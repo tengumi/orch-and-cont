@@ -1,0 +1,13 @@
+**
+!lab1/
+lab1/**
+!lab1/requirements.txt
+!taskflow-api/
+taskflow-api/**
+!taskflow-api/app/
+!taskflow-api/app/**
+!taskflow-api/migrations/
+!taskflow-api/migrations/**
+!taskflow-api/alembic.ini
+**/__pycache__
+**/*.pyc

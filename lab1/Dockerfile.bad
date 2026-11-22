@@ -1,9 +1,12 @@
 FROM python:latest
 
-WORKDIR /app
-
+WORKDIR /src
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip install --only-binary=:all: -r lab1/requirements.txt
 
-CMD uvicorn app:app --host 0.0.0.0 --port 8000
+WORKDIR /src/taskflow-api
+
+USER 10001:10001
+
+CMD uvicorn app.main:app --host 0.0.0.0 --port 8000
